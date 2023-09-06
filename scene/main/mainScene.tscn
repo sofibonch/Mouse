@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvy5p60fadfuh"]
+
+[ext_resource type="Script" path="res://scene/main/InitWorld.gd" id="1_p54ne"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="InitWorld" type="Node2D" parent="."]
+script = ExtResource("1_p54ne")
