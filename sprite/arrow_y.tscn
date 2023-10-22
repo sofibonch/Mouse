@@ -4,7 +4,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uw7n0"]
 atlas = ExtResource("1_bkuk4")
-region = Rect2(0, 36, 24, 36)
+region = Rect2(360, 36, 24, 36)
 
 [node name="ArrowY" type="Sprite2D"]
 modulate = Color(0.670588, 0.698039, 0.74902, 1)
