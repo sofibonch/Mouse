@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d22dj28rwqktr"]
+[gd_scene load_steps=10 format=3 uid="uid://vnpw8hie56o2"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_2251q"]
-[ext_resource type="Texture2D" uid="uid://na5jcagc641x" path="res://player/playerSprites.png" id="1_dexnk"]
+[ext_resource type="Texture2D" uid="uid://bf5moivh1o3xb" path="res://art/SpriteSheet.png" id="2_208s7"]
 
 [sub_resource type="Animation" id="Animation_lpmns"]
 length = 0.001
@@ -95,13 +95,18 @@ _data = {
 "walkUp": SubResource("Animation_oef4a")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qskni"]
+size = Vector2(14, 4)
+
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_2251q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(8, 8)
-texture = ExtResource("1_dexnk")
+position = Vector2(0, -8)
+texture = ExtResource("2_208s7")
 hframes = 4
 vframes = 7
 
@@ -109,3 +114,7 @@ vframes = 7
 libraries = {
 "": SubResource("AnimationLibrary_7q2q8")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_qskni")
